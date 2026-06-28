@@ -1,0 +1,122 @@
+/* ========= RESET ========= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========= VARIÁVEIS ========= */
+
+:root{
+    --bg-color: #241F31;
+
+    --surface-color: #322B45;
+
+    --primary-color: #8B7CF6;
+    --secondary-color: #C8C1E6;
+
+    --text-color: #F4F2FF;
+    --text-secondary: #B7B2CC;
+
+    --border-color: #4B4267;
+
+    --border-radius: 32px;
+
+    --shadow: 0 12px 35px rgba(10, 8, 20, .35);
+
+    --transition: .3s ease;
+}
+
+/* ========= CONFIGURAÇÕES GERAIS ========= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========= CONTAINER: BOXED LAYOUT ========= */
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* ========= HEADER ========= */
+
+header {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ========= NAVBAR ========= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 18px 30px;
+
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+
+    font-size: 1rem;
+
+    transition: var(--transition);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+
+    font-weight: bold;
+}
+
+.nav-links a{
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    opacity: .7;
+}
+
+/* ========= RESPONSIVIDADE ========= */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links{
+        gap: 1.2rem;
+    }
+
+}
